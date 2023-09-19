@@ -1,0 +1,87 @@
+.profile {
+  display: flex;
+  padding-top: 40px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profile__content {
+  display: grid;
+  grid-template-areas:
+    "title button"
+    "paragraph paragraph";
+  grid-template-columns: minmax(auto, 373px) auto;
+  grid-gap: 7px 18px;
+  align-items: center;
+}
+
+.profile__image {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-right: 30px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.profile__title {
+  grid-area: title;
+  color: #fff;
+  font-family: Inter;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile__edit-button {
+  grid-area: button;
+  background: transparent url(/images/Edit\ Button.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  border: 1px #fff solid;
+  margin: 0;
+  padding: 0;
+  transition: 0.2s ease;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.5;
+}
+
+.profile__paragraph {
+  grid-area: paragraph;
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 373px;
+}
+
+.profile__add-button {
+  background: transparent url(/images/Add\ Button.svg) no-repeat center;
+  width: 150px;
+  height: 50px;
+  border: 2px #fff solid;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-left: auto;
+  padding: 0;
+  transition: 0.2s ease;
+}
+
+.profile__add-button:hover {
+  opacity: 0.5;
+}
