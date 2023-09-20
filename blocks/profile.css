@@ -46,10 +46,11 @@
   border: 1px #fff solid;
   padding: 0;
   transition: 0.2s ease;
+  cursor: url(../images/cursor.svg) 12 0, pointer;
 }
 
 .profile__edit-button:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .profile__paragraph {
@@ -74,14 +75,14 @@
   height: 50px;
   border: 2px #fff solid;
   border-radius: 2px;
-  overflow: hidden;
   margin-left: auto;
   padding: 0;
   transition: 0.2s ease;
+  cursor: url(../images/cursor.svg) 12 0, pointer;
 }
 
 .profile__add-button:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 @media screen and (max-width: 776px) {
   .profile__add-button {
@@ -99,9 +100,7 @@
 
 @media screen and (max-width: 635px) {
   .profile {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
     padding-top: 42px;
   }
