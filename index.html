@@ -37,6 +37,7 @@
             aria-label="Add new card"
             type="button"
             class="profile__add-button"
+            id="profile__add-button"
           ></button>
         </section>
         <section class="cards page__section">
@@ -51,6 +52,11 @@
                     type="button"
                     class="card__like-button"
                   ></button>
+                  <button
+                    aria-label="Delete"
+                    type="button"
+                    class="card__delete-button"
+                  ></button>
                 </div>
               </li>
             </template>
@@ -60,37 +66,81 @@
       <footer class="footer page__section">
         <p class="footer__copyright">&copy; 2023 Around The U.S.</p>
       </footer>
-    </div>
-    <div class="modal" id="modal-edit">
-      <div class="modal__container">
-        <button
-          aria-label="Close"
-          type="button"
-          class="modal__close-button"
-          id="modal-close-button"
-        ></button>
-        <h2 class="modal__title">Edit profile</h2>
-        <form class="modal__form">
-          <input
-            name="title"
-            id="input-title"
-            type="text"
-            class="modal__input"
-            placeholder="Name"
-            required
-          />
-          <input
-            name="description"
-            id="input-paragraph"
-            type="text"
-            class="modal__input"
-            placeholder="Description"
-            required
-          />
-          <button aria-label="Save" type="submit" class="modal__button">
-            Save
-          </button>
-        </form>
+      <div class="modal" id="modal-edit">
+        <div class="modal__container">
+          <button
+            aria-label="Close"
+            type="button"
+            class="modal__close-button"
+            id="modal-close-button"
+          ></button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form class="modal__form">
+            <input
+              name="name"
+              id="input-name"
+              type="text"
+              class="modal__input"
+              placeholder="Name"
+              required
+            />
+            <input
+              name="description"
+              id="input-description"
+              type="text"
+              class="modal__input"
+              placeholder="Description"
+              required
+            />
+            <button aria-label="Save" type="submit" class="modal__button">
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="modal-add">
+        <div class="modal__container">
+          <button
+            aria-label="Close"
+            type="button"
+            class="modal__close-button"
+            id="add-close-button"
+          ></button>
+          <h2 class="modal__title">New Place</h2>
+          <form class="modal__form">
+            <input
+              name="title"
+              id="input-title"
+              type="text"
+              class="modal__input"
+              placeholder="Title"
+              required
+            />
+            <input
+              name="image"
+              id="input-url"
+              type="text"
+              class="modal__input"
+              placeholder="Image link"
+              required
+            />
+            <button aria-label="Save" type="submit" class="modal__button">
+              Create
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_type_preview" id="modal-image">
+        <div class="modal__container modal__container_type_preview">
+          <img src="" alt="" class="modal__image" />
+          <p class="modal__preview" id="modal-preview"></p>
+          <button
+            aria-label="Close"
+            type="button"
+            class="modal__close-button modal__close-button_preview"
+            id="image-close-button"
+          ></button>
+        </div>
       </div>
     </div>
     <script src="./scripts/index.js"></script>

@@ -46,7 +46,7 @@
   border: 1px #fff solid;
   padding: 0;
   transition: 0.2s ease;
-  cursor: url(../images/cursor.svg) 12 0, pointer;
+  cursor: url(../images/cursor.svg) 5 4, pointer;
 }
 
 .profile__edit-button:hover {
@@ -78,7 +78,7 @@
   margin-left: auto;
   padding: 0;
   transition: 0.2s ease;
-  cursor: url(../images/cursor.svg) 12 0, pointer;
+  cursor: url(../images/cursor.svg) 5 4, pointer;
 }
 
 .profile__add-button:hover {
