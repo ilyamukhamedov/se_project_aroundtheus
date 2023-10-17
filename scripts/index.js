@@ -77,8 +77,7 @@ function handleAddFormSubmit(evt) {
   const link = inputUrl.value;
   renderCard({ name, link }, cardList);
   closeForm(addModal);
-  inputTitle.reset();
-  inputUrl.reset();
+  evt.target.reset();
 }
 
 function fillProfileForm() {
