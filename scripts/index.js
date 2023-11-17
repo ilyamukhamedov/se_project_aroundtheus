@@ -54,10 +54,19 @@ const inputUrl = addFormElement.querySelector("#input-url");
 
 function closeForm(form) {
   form.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEsc);
 }
 
 function openForm(form) {
   form.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEsc);
+}
+
+function handleEsc(evt) {
+  const modal = document.querySelector(".modal_opened");
+  if (evt.key === "Escape") {
+    closeForm(modal);
+  }
 }
 
 modals.forEach((modal) => {
@@ -138,18 +147,5 @@ addNewCardButton.addEventListener("click", () => openForm(addModal));
 addCloseButton.addEventListener("click", () => closeForm(addModal));
 
 imageCloseButton.addEventListener("click", () => closeForm(imageModal));
-
-document.addEventListener("keydown", function (evt) {
-  if (evt.key === "Escape") {
-    editModal.classList.contains("modal_opened");
-    closeForm(editModal);
-
-    addModal.classList.contains("modal_opened");
-    closeForm(addModal);
-
-    imageModal.classList.contains("modal_opened");
-    closeForm(imageModal);
-  }
-});
 
 initialCards.forEach((cardData) => renderCard(cardData, cardList));
