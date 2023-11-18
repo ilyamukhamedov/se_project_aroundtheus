@@ -36,6 +36,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 373px;
 }
 
 .profile__edit-button {
@@ -91,6 +92,7 @@
 
   .profile__title {
     font-size: 32px;
+    max-width: 290px;
   }
 
   .profile__paragraph {
@@ -121,6 +123,7 @@
   .profile__title {
     text-align: center;
     font-size: 22px;
+    max-width: 196px;
   }
 
   .profile__paragraph {
