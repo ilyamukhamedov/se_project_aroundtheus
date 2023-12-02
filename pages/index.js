@@ -51,7 +51,7 @@ const inputUrl = addFormElement.querySelector("#input-url");
 function closeModal(form) {
   form.classList.remove("modal_opened");
   document.removeEventListener("keydown", handleEsc);
-  editFormValidator.resetFormValidation();
+  formValidators["profile-form"].resetFormValidation();
 }
 
 function openModal(form) {
@@ -77,12 +77,13 @@ modals.forEach((modal) => {
   });
 });
 
+function createCard(item) {
+  const cardElement = new Card(item, "#card-template", handleImageClick);
+  return cardElement.generateCard();
+}
+
 function renderCard(data, wrapper) {
-  const card = new Card(
-    data,
-    "#card-template",
-    handleImageClick
-  ).generateCard();
+  const card = createCard(data);
   wrapper.prepend(card);
 }
 
@@ -102,10 +103,10 @@ function handleAddFormSubmit(evt) {
   evt.target.reset();
 }
 
-function handleImageClick() {
-  previewImage.src = this._link;
-  previewImage.alt = this._name;
-  previewTitle.textContent = this._name;
+function handleImageClick(data) {
+  previewImage.src = data.link;
+  previewImage.alt = data.name;
+  previewTitle.textContent = data.name;
   openModal(imageModal);
 }
 
@@ -131,6 +132,7 @@ initialCards.forEach((data) => renderCard(data, cardList));
 
 // VALIDATION //
 const config = {
+  formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__button",
   inactiveButtonClass: "modal__button_disabled",
@@ -138,8 +140,17 @@ const config = {
   errorClass: "modal__error_visible",
 };
 
-const editFormValidator = new FormValidator(config, profileFormElement);
-const addFormValidator = new FormValidator(config, addFormElement);
+const formValidators = {};
 
-addFormValidator.enableValidation();
-editFormValidator.enableValidation();
+const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
+  formList.forEach((formElement) => {
+    const validator = new FormValidator(config, formElement);
+    const formName = formElement.getAttribute("name");
+
+    formValidators[formName] = validator;
+    validator.enableValidation();
+  });
+};
+
+enableValidation(config);
