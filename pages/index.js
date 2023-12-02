@@ -51,7 +51,6 @@ const inputUrl = addFormElement.querySelector("#input-url");
 function closeModal(form) {
   form.classList.remove("modal_opened");
   document.removeEventListener("keydown", handleEsc);
-  formValidators["profile-form"].resetFormValidation();
 }
 
 function openModal(form) {
@@ -117,6 +116,7 @@ function fillProfileForm() {
 
 function openEditProfileModal() {
   fillProfileForm();
+  formValidators["profile-form"].resetFormValidation();
   openModal(editModal);
 }
 
