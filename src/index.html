@@ -8,7 +8,6 @@
     <meta name="author" content="Ilya" />
     <meta name="description" content="Around the U.S" />
     <meta name="keywords" content="HTML, CSS" />
-    <!-- <link rel="stylesheet" href="./pages/index.css" /> -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body class="page">
@@ -41,7 +40,7 @@
             aria-label="Add new card"
             type="button"
             class="profile__add-button"
-            id="profile__add-button"
+            id="profile-add-button"
           ></button>
         </section>
         <section class="cards page__section">
@@ -124,7 +123,7 @@
           <h2 class="modal__title">New Place</h2>
           <form class="modal__form" name="add-form">
             <input
-              name="title"
+              name="name"
               id="input-title"
               type="text"
               class="modal__input"
@@ -135,7 +134,7 @@
             />
             <span class="modal__error" id="input-title-error"></span>
             <input
-              name="image"
+              name="link"
               id="input-url"
               type="url"
               class="modal__input"
@@ -167,6 +166,5 @@
         </div>
       </div>
     </div>
-    <!-- <script defer src="./pages/index.js" type="module"></script> -->
   </body>
 </html>
