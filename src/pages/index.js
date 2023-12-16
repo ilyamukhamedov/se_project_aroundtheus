@@ -14,6 +14,7 @@ import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
+import { data } from "browserslist";
 
 // Create instances
 const cardPreviewPopup = new PopupWithImage(selectors.previewPopup);
@@ -27,10 +28,8 @@ const cardSection = new Section(
   {
     items: initialCards,
     renderer: (data) => {
-      const cardElement = new Card(data, selectors.cardTemplate, (data) => {
-        cardPreviewPopup.open(data);
-      });
-      cardSection.addItem(cardElement.generateCard());
+      const cardElement = createCard(data);
+      cardSection.addItem(cardElement);
     },
   },
   selectors.cardList
@@ -41,10 +40,8 @@ const userInfoPopup = new PopupWithForm(selectors.editFormPopup, (data) => {
 });
 
 const newCardPopup = new PopupWithForm(selectors.addFormPopup, (data) => {
-  const card = new Card(data, selectors.cardTemplate, () => {
-    cardPreviewPopup.open(data);
-  });
-  cardSection.addItem(card.generateCard());
+  const card = createCard(data);
+  cardSection.addItem(card);
 });
 
 // VALIDATION //
@@ -72,10 +69,19 @@ addNewCardButton.addEventListener("click", () => {
   newCardPopup.open();
 });
 
+// Functions
+
 function fillProfileForm() {
   const { name, description } = userInfo.getUserInfo();
   document.querySelector(selectors.inputName).value = name;
   document.querySelector(selectors.inputDescription).value = description;
+}
+
+function createCard(data) {
+  const cardElement = new Card(data, selectors.cardTemplate, (data) => {
+    cardPreviewPopup.open(data);
+  });
+  return cardElement.generateCard();
 }
 
 // Initialize instances
