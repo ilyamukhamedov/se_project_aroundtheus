@@ -31,6 +31,9 @@ export const changeImageButton = document.querySelector(
   "#profile-image-button"
 );
 
+export const inputName = document.querySelector("#input-name");
+export const inputDescription = document.querySelector("#input-description");
+
 export const selectors = {
   cardList: ".cards__list",
   editFormPopup: "#modal-edit",
@@ -39,17 +42,9 @@ export const selectors = {
   changeImagePopup: "#modal-profile-image",
   previewPopup: "#modal-image",
   profileForm: "profile-form",
-  addForm: "add-form",
-  previewImage: ".modal__image",
-  previewTitle: "#modal-preview",
-  modals: ".modal",
   profileTitle: ".profile__title",
   profileParagraph: ".profile__paragraph",
   profileImage: ".profile__image",
-  inputName: "#input-name",
-  inputDescription: "#input-description",
-  inputTitle: "#input-title",
-  inputUrl: "#input-url",
   cardTemplate: "#card-template",
 };
 
