@@ -23,6 +23,23 @@
   background-position: center;
 }
 
+.profile__image-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  background: url(../images/Edit.svg) no-repeat center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  cursor: url(../images/cursor.svg) 5 4, pointer;
+  transition: 0.2s ease;
+  opacity: 0;
+}
+
+.profile__image-button:hover {
+  opacity: 1;
+}
+
 .profile__title {
   grid-area: title;
   color: #fff;
