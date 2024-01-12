@@ -125,7 +125,7 @@ function handleAddFormSubmit(cardData) {
       addCardPopup.reset();
     });
   }
-  handleSubmit(makeRequest, addCardPopup);
+  handleSubmit(makeRequest, addCardPopup, "Creating...");
 }
 
 function handleAvatarFormSubmit(data) {
@@ -197,6 +197,7 @@ function renderCard(data) {
 // Event Listeners
 
 changeImageButton.addEventListener("click", () => {
+  formValidators[selectors.profielImageForm].resetFormValidation();
   updateAvatarPopup.open();
 });
 
@@ -207,6 +208,7 @@ profileEditButton.addEventListener("click", () => {
 });
 
 addNewCardButton.addEventListener("click", () => {
+  formValidators[selectors.addForm].resetFormValidation();
   addCardPopup.open();
 });
 

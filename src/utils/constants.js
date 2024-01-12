@@ -42,6 +42,8 @@ export const selectors = {
   changeImagePopup: "#modal-profile-image",
   previewPopup: "#modal-image",
   profileForm: "profile-form",
+  addForm: "add-form",
+  profielImageForm: "profile-image-form",
   profileTitle: ".profile__title",
   profileParagraph: ".profile__paragraph",
   profileImage: ".profile__image",
