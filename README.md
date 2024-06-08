@@ -29,4 +29,4 @@ This project is part of the Software Engineering program at TripleTen. It is a w
 
 The project is deployed and accessible via the following link:
 
-https://kreker911.github.io/se_project_aroundtheus/
+https://ilyamukhamedov.github.io/se_project_aroundtheus/
