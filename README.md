@@ -19,7 +19,7 @@ This project is part of the Software Engineering program at TripleTen. It is a w
 
 <img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Main.png" width="600"/>
 
-<img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Mobile.png" width="600"/>
+<img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Mobile.png" width="400"/>
 
 ### Deployment
 
