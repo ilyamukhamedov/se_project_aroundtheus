@@ -21,7 +21,7 @@ export default class PopupWithConfirm extends Popup {
     });
   }
 
-  setLoading(isLoading) {
+  setLoading(isLoadingjow) {
     if (isLoading) {
       this._submitButton.textContent = "Deleting...";
     } else {

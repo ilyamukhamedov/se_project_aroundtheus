@@ -19,14 +19,10 @@ This project is part of the Software Engineering program at TripleTen. It is a w
 
 <img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Main.png" width="600"/>
 
-<img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Popup.png" width="600"/>
-
-<img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Preview.png" width="600"/>
-
 <img src="https://github.com/ilyamukhamedov/se_project_aroundtheus/blob/main/src/images/Mobile.png" width="600"/>
 
 ### Deployment
 
 The project is deployed and accessible via the following link:
 
-https://kreker911.github.io/se_project_aroundtheus/
+https://ilyamukhamedov.github.io/se_project_aroundtheus/
