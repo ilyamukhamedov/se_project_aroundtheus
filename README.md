@@ -1,4 +1,4 @@
-# Project 3: Around The U.S.
+# Around The U.S.
 
 This project is part of the Software Engineering program at TripleTen. It is a web application created using HTML, CSS, and JavaScript, following the design from Figma. The application is designed to display correctly on various screen sizes and includes interactive buttons for user interaction.
 
